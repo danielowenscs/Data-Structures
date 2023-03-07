@@ -6,8 +6,8 @@ public class LinkedList <E> {
 		Node <E> next;
 
 		public Node (E obj) {
-			data = obj;
-			next = null;
+			this.data = obj;
+			this.next = null;
 		}
 	}
 
@@ -20,7 +20,7 @@ public class LinkedList <E> {
 		tail = null;
 	}
 	public void addFirst (Object obj) {
-		Node <E> nodeToAdd = new Node<E>(obj);
+		Node <E> nodeToAdd = new Node (obj);
 		//empty case
 		size++;
 		if (head == null) {
@@ -34,7 +34,7 @@ public class LinkedList <E> {
 	}
 
 	public void addLast(Object obj) {
-		Node <E> nodeToAdd = new Node<E>(obj);
+		Node <E> nodeToAdd = new Node(obj);
 		//empty case
 		if (tail == null) {
 			head = nodeToAdd;
